@@ -10,6 +10,9 @@ import Find from "@/views/fujia/Find"
 import FenLei from "@/views/fujia/FenLei"
 import DingDan from "@/views/fujia/DingDan"
 import MyDe from "@/views/fujia/MyDe"
+// 二级嵌套
+import DongMan from '@/views/fujia/qiantao/DongMan'
+import XiJu from '@/views/fujia/qiantao/XiJu'
 
 Vue.config.productionTip = false
 // 全局配置路由
@@ -51,7 +54,17 @@ const routes = [
 
   }, {
     path: '/fenlei',
-    component: FenLei
+    component: FenLei,
+    children: [
+      {
+        path: 'xiju',
+        component: XiJu
+      },
+      {
+        path: 'dongman',
+        component: DongMan
+      }
+    ]
 
   }, {
     path: '/dingdan',

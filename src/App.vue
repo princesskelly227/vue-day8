@@ -14,10 +14,11 @@
     <div><router-view></router-view></div> -->
 
     <!-- 附加练习一 -->
-    <router-link to="/find">首页</router-link>
-    <router-link to="/fenlei">分类</router-link>
-    <router-link to="/dingdan">订单</router-link>
-    <router-link to="/myde">我的</router-link>
+    <router-link style="margin: 30px" to="/find">首页</router-link>
+    <!-- 二级嵌套在分类里面 -->
+    <router-link style="margin: 30px" to="/fenlei">分类</router-link>
+    <router-link style="margin: 30px" to="/dingdan">订单</router-link>
+    <router-link style="margin: 30px" to="/myde">我的</router-link>
     <div>
       <router-view></router-view>
     </div>
