@@ -4,6 +4,7 @@
       <router-link to="/find/recommend">推荐</router-link>
       <router-link to="/find/ranking">排行榜</router-link>
       <router-link to="/find/songlist">歌单</router-link>
+      <a :href="href" @click="btn">随机切换</a>
       <!-- <van-button type="primary">随机切换</van-button> -->
     </div>
     <div>
@@ -13,10 +14,34 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return {
+      href:'',
+      obj:{
+        0:'#/find/recommend',
+        1:'#/find/ranking',
+        2:'#/find/songlist',
+      }
+    }
+  },
+  methods:{
+    btn(){
+      this.href=this.obj[Math.floor(Math.random()*3)];
+    },
+  }
+};
 </script>
 
 <style scoped>
+a:nth-child(4){
+  border: solid 1px black;
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 5px;
+  padding: 3px;
+  text-decoration: initial;
+}
 .nav_main {
   background-color: red;
   color: white;

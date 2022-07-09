@@ -19,7 +19,7 @@ const routes = [
     component: Find,
     children: [
       {
-        path: '/',
+        path: '',
         component: Ranking
       },
       {
